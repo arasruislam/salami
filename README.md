@@ -30,18 +30,21 @@
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/arasruislam/salami.git
    cd salami
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Environment Setup**:
    Create a `.env.local` file in the root directory and add your MongoDB URI:
+
    ```env
    MONGODB_URI=your_mongodb_connection_string
    ```
@@ -57,18 +60,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - `app/`: Next.js App Router pages and API routes.
 - `components/`:
-    - `lottery/`: Spin wheel logic and UI.
-    - `result/`: Gift box animations and celebration modals.
-    - `dashboard/`: Winner leaderboard and stats.
-    - `ui/`: Reusable premium UI components (GlowButton, GlowCard, etc.).
+  - `lottery/`: Spin wheel logic and UI.
+  - `result/`: Gift box animations and celebration modals.
+  - `dashboard/`: Winner leaderboard and stats.
+  - `ui/`: Reusable premium UI components (GlowButton, GlowCard, etc.).
 - `lib/`: Utility functions, constants, and MongoDB connection.
 - `models/`: Database schemas.
 - `public/`: High-quality assets (sounds and festive images).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Created with ❤️ for the festive season.*
-
