@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-eid-emerald: #023D33; /* More vibrant Teal-Emerald */
+  --color-eid-emerald-light: #065F52;
+  --color-eid-midnight: #000F0D;
+  --color-eid-gold: #D4AF37;
+  --color-eid-gold-light: #F3D060;
+  --color-eid-gold-dark: #8a6d1d;
+  --color-eid-mint: #34D399;
+  --color-eid-text: #F3F4F6;
+  --color-eid-text-muted: #9CA3AF;
+  
+  --animate-shimmer: shimmer 3s linear infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 60s linear infinite;
+
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.02); }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+@layer base {
+  html, body {
+    background-image: linear-gradient(rgba(0, 15, 13, 0.85), rgba(0, 8, 7, 0.95)), url('/images/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--color-eid-text);
+    min-height: 100%;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ───── SHARP PREMIUM TITLE ───── */
+.glow-title-premium {
+  font-family: var(--font-noto-serif-bengali), serif;
+  background: linear-gradient(to bottom, #FFFBF0 0%, #F3D060 40%, #D4AF37 70%, #8a6d1d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 15px rgba(212,175,55,0.4));
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.01em;
+}
+
+/* ───── LUXURY GLASSMORPHISM ───── */
+.glass-panel {
+  background: rgba(1, 11, 9, 0.6);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-pill {
+  background: rgba(6, 78, 59, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ───── CUSTOM SCROLLBAR ───── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+/* ───── UTILITIES ───── */
+.text-gold-gradient {
+  background: linear-gradient(to bottom, #FFF4CC, #F3D060, #D4AF37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+/* ───── EID PATTERN ───── */
+.pattern-eid-geometric {
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black 60%, rgba(0,0,0,0.3) 100%);
+}
+
+.mask-islamic-tile {
+  mask-image: radial-gradient(circle at 50% 50%, black 70%, transparent 100%);
+}
+
