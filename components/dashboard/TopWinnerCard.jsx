@@ -10,13 +10,13 @@ export default function TopWinnerCard({ winner, rank }) {
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ delay: rank * 0.1 }}
-      whileHover={{ scale: 1.02 }}
       className={`relative flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-500 group overflow-hidden ${
         isFirst 
           ? "bg-gradient-to-r from-[#D4AF37]/25 via-[#064E3B]/20 to-transparent border-[#D4AF37] shadow-[0_15px_40px_rgba(212,175,55,0.2)]" 
-          : "bg-[#011B15]/40 border-white/5 hover:border-white/10"
+          : "bg-[#011B15]/40 border-white/5"
       }`}
     >
+
       {/* Radiant Shimmer for 1st Place */}
       {isFirst && (
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent w-[200%] -translate-x-full animate-shimmer pointer-events-none" />

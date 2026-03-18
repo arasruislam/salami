@@ -1,41 +1,21 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-eid-emerald: #023D33; /* More vibrant Teal-Emerald */
-  --color-eid-emerald-light: #065F52;
-  --color-eid-midnight: #000F0D;
-  --color-eid-gold: #D4AF37;
-  --color-eid-gold-light: #F3D060;
-  --color-eid-gold-dark: #8a6d1d;
-  --color-eid-mint: #34D399;
-  --color-eid-text: #F3F4F6;
-  --color-eid-text-muted: #9CA3AF;
-  
-  --animate-shimmer: shimmer 3s linear infinite;
-  --animate-float-slow: float-slow 8s ease-in-out infinite;
-  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
-  --animate-spin-slow: spin-slow 60s linear infinite;
-
-  @keyframes shimmer {
-    from { background-position: 200% 0; }
-    to { background-position: -200% 0; }
-  }
-
-  @keyframes float-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
-
-  @keyframes pulse-subtle {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.85; transform: scale(1.02); }
-  }
-
-  @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@layer base {
+  :root {
+    --color-eid-emerald: #023D33;
+    --color-eid-emerald-light: #065F52;
+    --color-eid-midnight: #000F0D;
+    --color-eid-gold: #D4AF37;
+    --color-eid-gold-light: #F3D060;
+    --color-eid-gold-dark: #8a6d1d;
+    --color-eid-mint: #34D399;
+    --color-eid-text: #F3F4F6;
+    --color-eid-text-muted: #9CA3AF;
   }
 }
+
 
 @layer base {
   html, body {
