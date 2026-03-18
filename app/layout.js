@@ -9,7 +9,7 @@ const notoSerifBengali = Noto_Serif_Bengali({
 });
 
 export const metadata = {
-  title: "সালামি - Salami App",
+  title: "সালামি - Salami",
   description: "তোমার সালামি এখনই নিয়ে নাও!",
 };
 
