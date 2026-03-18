@@ -38,7 +38,7 @@ export default function HeroSection() {
         variants={itemVariants} 
         className="relative animate-float-slow"
       >
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#D4AF37] glow-title-premium leading-tight tracking-tight">
+        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#D4AF37] glow-title-premium leading-tight tracking-tight z-10">
           {BANGLA_MESSAGES.TITLE}
         </h1>
         {/* Subtle sharp underline */}
